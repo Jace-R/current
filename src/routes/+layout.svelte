@@ -1,6 +1,7 @@
 <script>
 	import Header from './Header.svelte';
 	import './styles.css';
+	import "../app.css";
 </script>
 
 <div class="app">
@@ -15,6 +16,10 @@
 	</footer>
 </div>
 
+<h1 class="text-3xl font-bold underline">
+	Hello world!
+  </h1>
+
 <style>
 	.app {
 		display: flex;
@@ -28,7 +33,7 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
-		max-width: 64rem;
+		max-width: 120rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}

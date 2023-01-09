@@ -1,6 +1,7 @@
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </svelte:head>
 
 <div class="text-column">
@@ -23,4 +24,9 @@
 		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
 		using it with JavaScript disabled!
 	</p>
+</div>
+<div>
+	<button class="btn btn-primary">
+	Button	
+	</button>
 </div>

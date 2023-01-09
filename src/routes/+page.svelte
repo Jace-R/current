@@ -7,6 +7,7 @@
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </svelte:head>
 
 <section>
@@ -26,6 +27,11 @@
 	</h2>
 
 	<Counter />
+	<div>
+		<button class="btn btn-primary">
+		Button	
+		</button>
+	</div>
 </section>
 
 <style>
