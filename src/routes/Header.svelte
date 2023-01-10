@@ -22,18 +22,16 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
 			<li aria-current={$page.url.pathname.startsWith('/seeds') ? 'page' : undefined}>
 				<a href="/seeds">Seeds</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/hot_sauce') ? 'page' : undefined}>
-				<a href="/hot_sauce">Hot Sauce</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/peppers') ? 'page' : undefined}>
 				<a href="/peppers">Peppers</a>
 			</li>
+			<li aria-current={$page.url.pathname.startsWith('/hot_sauce') ? 'page' : undefined}>
+				<a href="/hot_sauce">Hot Sauce</a>
+			</li>
+			
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
