@@ -1,16 +1,24 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+	import Hamburger from './Hamburger.svelte';
+	import Sidebar from './Sidebar.svelte';
+	import {
+    ButtonDropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle
+  	} from 'sveltestrap';
+	
+	export let sidebar = false
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
-
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+	
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
@@ -19,19 +27,15 @@
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
+			<li aria-current={$page.url.pathname.startsWith('/landing') ? 'page' : undefined}>
+				<a href="/landing">Menu</a>
+			</li>
+			<li aria-current={$page.url.pathname.startsWith('/cartwheel') ? 'page' : undefined}>
+				<a href="/cartwheel">Seeds</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/seeds') ? 'page' : undefined}>
-				<a href="/seeds">Seeds</a>
+				<a href="/seeds">Hot Sauce</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/peppers') ? 'page' : undefined}>
-				<a href="/peppers">Peppers</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/hot_sauce') ? 'page' : undefined}>
-				<a href="/hot_sauce">Hot Sauce</a>
-			</li>
-			
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
@@ -39,16 +43,38 @@
 	</nav>
 
 	<div class="corner">
+		<a href="https://kit.svelte.dev">
+			<img src={logo} alt="SvelteKit" />
+		</a>
+	</div>
+
+	<div class="corner">
 		<a href="https://github.com/sveltejs/kit">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
+
+		
+	<!-- Profile dropdown -->
+	<ButtonDropdown>
+		<DropdownToggle color="light" caret>Sign In</DropdownToggle>
+		<DropdownMenu>
+		  <DropdownItem header>Manage your Account</DropdownItem>
+		  <DropdownItem>Profile</DropdownItem>
+		  <DropdownItem>Settings</DropdownItem>
+		  <DropdownItem divider />
+		  <DropdownItem>Account</DropdownItem>
+		  <DropdownItem>Sign Out</DropdownItem>
+		</DropdownMenu>
+	  </ButtonDropdown>
+     
+		  
 </header>
 
 <style>
 	header {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
 
 	.corner {

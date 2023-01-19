@@ -3,13 +3,25 @@
 	import './styles.css';
 	import "../app.css";
 	import logo from '$lib/images/svelte-logo.svg';
+	import face from '$lib/images/face.png';
+	import instagram from '$lib/images/insta.jpg';
+	import pin from '$lib/images/pin.png';
+	import twitter from '$lib/images/twitter.png';
+
 	import github from '$lib/images/github.svg';
-	
-	
+	import Sidebar from './Sidebar.svelte';
+
+	let sidebar_show = false;
 </script>
+
+
 
 <div class="app">
 	<Header />
+
+	<button on:click={() => sidebar_show = !sidebar_show}><p>Infernalpepper.com</p></button>
+
+	<Sidebar bind:show={sidebar_show} />
 
 	<main>
 		<slot />
@@ -23,80 +35,35 @@
 		<div class="container text-center text-md-left">
 
 			<!-- Footer links -->
-			<div class="row text-center text-md-left mt-3 pb-3">
+			<div class="row text-center text-md-left pb-1">
 		
 			  <!-- Grid column -->
-			  <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-				<h6 class="text-uppercase mb-4 font-weight-bold">MyCreations</h6>
-				<p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing
-				  elit.
-				</p>
+			  <div class="col-md-3 col-lg-3 col-xl-3 mx-auto ">
+				<a href="./landing" >MyCreations</a>
 			  </div>
 			  <!-- Grid column -->
 		
 			  <hr class="w-100 clearfix d-md-none">
 		
 			  <!-- Grid column -->
-			  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-				<h6 class="text-uppercase mb-4 font-weight-bold">Activities</h6>
-				<p>
-				  <a href="#!">Quizzes</a>
-				</p>
-				<p>
-				  <a href="#!">Exams</a>
-				</p>
-				<p>
-				  <a href="#!">Notes</a>
-				</p>
-				<p>
-				  <a href="#!">Powerpoints</a>
-				</p>
-				<p>
-				  <a href="#!">Solution Manuals</a>
-				</p>
-				<p>
-				  <a href="#!">Animations</a>
-				</p>
+			  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+				<a href="./shoppingcart" >Checkout</a>
 			  </div>
 			  <!-- Grid column -->
 		
 			  <hr class="w-100 clearfix d-md-none">
 		
 			  <!-- Grid column -->
-			  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-				<h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-				<p>
-				  <a href="#!">Your Account</a>
-				</p>
-				<p>
-				  <a href="#!">Become an Affiliate</a>
-				</p>
-				<p>
-				  <a href="#!">Shipping Rates</a>
-				</p>
-				<p>
-				  <a href="#!">Help</a>
-				</p>
+			  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto ">
+				<a href="./peppers" >Your Account</a>
 			  </div>
 		
 			  <!-- Grid column -->
 			  <hr class="w-100 clearfix d-md-none">
 		
 			  <!-- Grid column -->
-			  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-				<h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-				<p>
-				  <i class="ni ni-shop"></i> Ottawa, Ontario, Canada
-				</p>
-				<p>
-				  <i class="ni ni-email-83"></i> informaxn@gmail.com
-				</p>
-				<p>
-				  <i class="ni ni-mobile-button"></i> + 01 234 567 89
-				</p>
-				<p>
-				  <i class="ni ni-send"></i> + 01 234 567 89
-				</p>
+			  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto ">
+				<a href="./about" >Contact</a>
 			  </div>
 			  <!-- Grid column -->
 		
@@ -106,25 +73,20 @@
 			<hr>
 	<!-- Grid row -->
     <div class="row d-flex align-items-center">
-      <div class="col-lg-12">
-          <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
-          <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
-      </div>
-
-        <div class="col-lg-12 text-lg-center btn-wrapper">
-          <a href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg">
+          <div class="col-lg-12 text-lg-center btn-wrapper">
+          <a href="https://twitter.com" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg">
             <img src={logo} alt="SvelteKit" />
           </a>
-          <a href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg">
+          <a href="https://www.facebook.com" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg">
             <img src={logo} alt="SvelteKit" />
           </a>
-          <a href="https://dribbble.com/creativetim" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round">
+          <a href="https://pinterest.com/" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round">
             <img src={logo} alt="SvelteKit" />
           </a>
-          <a href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg">
+          <a href="https://github.com" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg">
             <img src={logo} alt="SvelteKit" />
           </a>
-		  <a href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg">
+		  <a href="https://instagram.com" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg">
             <img src={logo} alt="SvelteKit" />
           </a>
         </div>
@@ -133,7 +95,7 @@
     <!-- Grid row -->
     <!-- Footer Links -->
 	<!-- Copyright -->
-	<div class="footer-copyright text-center py-3 ">© 2022 Copyright:
+	<div class="footer-copyright text-center py-1 ">© 2022 Copyright:
 	   <a href="http://www.infernalpeeper.com/"> infernalpepper.com</a>
 	</div>
 	<!-- Copyright -->
@@ -156,7 +118,7 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
-		max-width: 120rem;
+		max-width: 100rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
@@ -182,4 +144,10 @@
 			padding: 12px 0;
 		}
 	}
+
+	:global(body){
+        background-color: rgb(168, 162, 107);
+        background-image: url("$lib/images/sauce.gif");
+    }
+
 </style>
