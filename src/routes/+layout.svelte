@@ -2,11 +2,6 @@
 	import Header from './Header.svelte';
 	import './styles.css';
 	import "../app.css";
-	import logo from '$lib/images/svelte-logo.svg';
-	import face from '$lib/images/face.png';
-	import instagram from '$lib/images/insta.jpg';
-	import pin from '$lib/images/pin.png';
-	import twitter from '$lib/images/twitter.png';
 
 	import github from '$lib/images/github.svg';
 	import Sidebar from './Sidebar.svelte';
@@ -47,7 +42,7 @@
 		
 			  <!-- Grid column -->
 			  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-				<a href="./shoppingcart" >Checkout</a>
+				<a href="./login" >Checkout</a>
 			  </div>
 			  <!-- Grid column -->
 		
@@ -55,7 +50,7 @@
 		
 			  <!-- Grid column -->
 			  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto ">
-				<a href="./peppers" >Your Account</a>
+				<a href="./account" >Your Account</a>
 			  </div>
 		
 			  <!-- Grid column -->
@@ -63,7 +58,7 @@
 		
 			  <!-- Grid column -->
 			  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto ">
-				<a href="./about" >Contact</a>
+				<a href="./contact" >Contact</a>
 			  </div>
 			  <!-- Grid column -->
 		
@@ -73,26 +68,24 @@
 			<hr>
 	<!-- Grid row -->
     <div class="row d-flex align-items-center">
-          <div class="col-lg-12 text-lg-center btn-wrapper">
-          <a href="https://twitter.com" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg">
-            <img src={logo} alt="SvelteKit" />
-          </a>
-          <a href="https://www.facebook.com" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg">
-            <img src={logo} alt="SvelteKit" />
-          </a>
-          <a href="https://pinterest.com/" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round">
-            <img src={logo} alt="SvelteKit" />
-          </a>
-          <a href="https://github.com" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg">
-            <img src={logo} alt="SvelteKit" />
-          </a>
-		  <a href="https://instagram.com" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg">
-            <img src={logo} alt="SvelteKit" />
-          </a>
-        </div>
-
-    </div>
-    <!-- Grid row -->
+  
+		  <div class="col-lg-6 text-lg-center btn-wrapper ">
+			<a href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" >
+			  <i class="fa fa-twitter"></i>
+			</a>
+			<a href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" >
+			  <i class="fa fa-facebook-square"></i>
+			</a>
+			<a href="https://dribbble.com/creativetim" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" >
+			  <i class="fa fa-dribbble"></i>
+			</a>
+			<a href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" >
+			  <i class="fa fa-github"></i>
+			</a>
+		  </div>
+  
+	</div>
+	<!-- Grid row -->
     <!-- Footer Links -->
 	<!-- Copyright -->
 	<div class="footer-copyright text-center py-1 ">© 2022 Copyright:
