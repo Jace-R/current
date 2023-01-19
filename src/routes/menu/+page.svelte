@@ -101,7 +101,7 @@
           <!-- Options -->
           <div class="mt-4 lg:row-span-3 lg:mt-0">
             <h2 class="sr-only">Product information</h2>
-            <p class="text-3xl tracking-tight text-gray-900">$192</p>
+            <p class="text-3xl tracking-tight text-gray-900">Super Hot Peppers</p>
     
             <!-- Reviews -->
             <div class="mt-6">
@@ -155,8 +155,8 @@
                       Not Active and Checked: "ring-2"
                     -->
                     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
-                      <input type="radio" name="color-choice" value="White" class="sr-only" aria-labelledby="color-choice-0-label">
-                      <span id="color-choice-0-label" class="sr-only"> White </span>
+                      <input type="radio" name="color-choice" value="Yellow" class="sr-only" aria-labelledby="color-choice-0-label">
+                      <span id="color-choice-0-label" class="sr-only"> Yellow </span>
                       <span aria-hidden="true" class="h-8 w-8 bg-white border border-black border-opacity-10 rounded-full"></span>
                     </label>
     
@@ -165,8 +165,8 @@
                       Not Active and Checked: "ring-2"
                     -->
                     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
-                      <input type="radio" name="color-choice" value="Gray" class="sr-only" aria-labelledby="color-choice-1-label">
-                      <span id="color-choice-1-label" class="sr-only"> Gray </span>
+                      <input type="radio" name="color-choice" value="Orange" class="sr-only" aria-labelledby="color-choice-1-label">
+                      <span id="color-choice-1-label" class="sr-only"> Orange </span>
                       <span aria-hidden="true" class="h-8 w-8 bg-gray-200 border border-black border-opacity-10 rounded-full"></span>
                     </label>
     
@@ -175,8 +175,28 @@
                       Not Active and Checked: "ring-2"
                     -->
                     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
-                      <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-2-label">
-                      <span id="color-choice-2-label" class="sr-only"> Black </span>
+                      <input type="radio" name="color-choice" value="Red" class="sr-only" aria-labelledby="color-choice-2-label">
+                      <span id="color-choice-2-label" class="sr-only"> Red </span>
+                      <span aria-hidden="true" class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
+                    </label>
+
+                    <!--
+                      Active and Checked: "ring ring-offset-1"
+                      Not Active and Checked: "ring-2"
+                    -->
+                    <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
+                      <input type="radio" name="color-choice" value="Purple" class="sr-only" aria-labelledby="color-choice-2-label">
+                      <span id="color-choice-2-label" class="sr-only"> Purple </span>
+                      <span aria-hidden="true" class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
+                    </label>
+
+                    <!--
+                      Active and Checked: "ring ring-offset-1"
+                      Not Active and Checked: "ring-2"
+                    -->
+                    <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
+                      <input type="radio" name="color-choice" value="Brown" class="sr-only" aria-labelledby="color-choice-2-label">
+                      <span id="color-choice-2-label" class="sr-only"> Brown </span>
                       <span aria-hidden="true" class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
                     </label>
                   </div>

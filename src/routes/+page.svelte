@@ -82,7 +82,7 @@
 	  <h1></h1>
 	  <h1></h1>
 <section>
-	<div class="col ">
+	<div class="col">
 		<div class="cards">
 			<div>
 				<h1 class="text-center">Mango Madness</h1>

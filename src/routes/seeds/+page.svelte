@@ -3,10 +3,11 @@
   import { Col, Container, Row } from 'sveltestrap';
   import { quintOut } from "svelte/easing";
   import { Popover } from 'sveltestrap';
+  import bottles from '$lib/images/bottles.png';
 
   import { Router, Route, Link } from "svelte-navigator";
   import Seed from './seed.svelte';
-	let visible = false;
+	let visible = true;
 
   import {
     Carousel,
@@ -220,10 +221,11 @@
 
 <div class="bg-gray-100">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-	  <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-		<h2 class="text-2xl font-bold text-gray-900">On Specials</h2>
+	  <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-20">
+		<Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Selections</h1></Button>
+		
   
-		<div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+		<div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-3 lg:space-y-0">
 		  <div class="group relative">
 			<div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
 			  <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
@@ -286,6 +288,70 @@
 					</Modal>
 			  </div> 
 		  </div>
+
+		  <div class="group relative">
+			<div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+			  <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+			</div>
+			<h3 class="mt-6 text-sm text-gray-500">    
+				<div>
+				  <Button block color="secondary" on:click={toggle}>Pineapple Lemonstarburst</Button>
+					  <Modal isOpen={open} {toggle}>
+						<ModalHeader {toggle}>Modal title</ModalHeader>
+						<ModalBody>
+						  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						  tempor incididunt ut labore et dolore magna aliqua.
+						</ModalBody>
+						<ModalFooter>
+						  <Button color="primary" on:click={toggle}>Do Something</Button>
+						  <Button color="secondary" on:click={toggle}>Cancel</Button>
+						</ModalFooter>
+					  </Modal>
+				</div>
+		  </div>
+  
+		  <div class="group relative">
+			<div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+			  <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+			</div>
+			<h3 class="mt-6 text-sm text-gray-500">
+			  <div>
+				<Button block color="secondary" on:click={toggle}>Strawberry Inferno</Button>
+					<Modal isOpen={open} {toggle}>
+					  <ModalHeader {toggle}>Modal title</ModalHeader>
+					  <ModalBody>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.
+					  </ModalBody>
+					  <ModalFooter>
+						<Button color="primary" on:click={toggle}>Do Something</Button>
+						<Button color="secondary" on:click={toggle}>Cancel</Button>
+					  </ModalFooter>
+					</Modal>
+			  </div> 
+		  </div>
+  
+		  <div class="group relative">
+			<div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+			  <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
+			</div>
+			<h3 class="mt-6 text-sm text-gray-500">
+			  <div>
+				<Button block color="secondary" on:click={toggle}>Berry Peach Lava</Button>
+					<Modal isOpen={open} {toggle}>
+					  <ModalHeader {toggle}>Modal title</ModalHeader>
+					  <ModalBody>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.
+					  </ModalBody>
+					  <ModalFooter>
+						<Button color="primary" on:click={toggle}>Do Something</Button>
+						<Button color="secondary" on:click={toggle}>Cancel</Button>
+					  </ModalFooter>
+					</Modal>
+			  </div> 
+		  </div>
+
 		</div>
 	<div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
 	  <div class="group relative">
@@ -393,24 +459,19 @@
   
 <section>
 	<div class="bg-gray-100" >
-		<div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-		  <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
-	  
+		<div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-6xl lg:px-8">
+			<div class="border border-style: solid;">
+				<Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collections</h1></Button>
+			</div>
 		  <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 			<div class="group relative">
 			  <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
 				<img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 			  </div>
 			  <div class="mt-4 flex justify-between">
-				<div>
-				  <h3 class="text-sm text-warning-700">
-					<a href="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg">
-					  <span aria-hidden="true" class="absolute inset-0"></span>
-					  Basic Tee
-					</a>
-				  </h3>
-				  <p class="mt-1 text-sm text-secondary-500">Black</p>
-				</div>
+		
+					<Button block>Block</Button>
+				
 				<!--<p class="text-sm font-medium text-secondary-900">$35</p> -->
 			  </div>
 			</div>
@@ -420,15 +481,7 @@
 				  <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 				</div>
 				<div class="mt-4 flex justify-between">
-				  <div>
-					<h3 class="text-sm text-gray-700">
-					  <a href="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg">
-						<span aria-hidden="true" class="absolute inset-0"></span>
-						Basic Tee
-					  </a>
-					</h3>
-					<p class="mt-1 text-sm text-gray-500">Black</p>
-				  </div>
+					<Button block>Block</Button>
 				  <!--<p class="text-sm font-medium text-secondary-900">$35</p> -->
 				</div>
 			  </div>
@@ -438,15 +491,7 @@
 				  <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 				</div>
 				<div class="mt-4 flex justify-between">
-				  <div>
-					<h3 class="text-sm text-gray-700">
-					  <a href="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg">
-						<span aria-hidden="true" class="absolute inset-0"></span>
-						Basic Tee
-					  </a>
-					</h3>
-					<p class="mt-1 text-sm text-gray-500">Black</p>
-				  </div>
+					<Button block>Block</Button>
 				  <!--<p class="text-sm font-medium text-secondary-900">$35</p> -->
 				</div>
 			  </div>
@@ -456,15 +501,7 @@
 				  <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 				</div>
 				<div class="mt-4 flex justify-between">
-				  <div>
-					<h3 class="text-sm text-gray-700">
-					  <a href="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg">
-						<span aria-hidden="true" class="absolute inset-0"></span>
-						Basic Tee
-					  </a>
-					</h3>
-					<p class="mt-1 text-sm text-gray-500">Black</p>
-				  </div>
+					<Button block>Block</Button>
 				  <!--<p class="text-sm font-medium text-secondary-900">$35</p> -->
 				</div>
 			  </div>
@@ -474,15 +511,7 @@
 				  <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 				</div>
 				<div class="mt-4 flex justify-between">
-				  <div>
-					<h3 class="text-sm text-warning-700">
-					  <a href="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg">
-						<span aria-hidden="true" class="absolute inset-0"></span>
-						Basic Tee
-					  </a>
-					</h3>
-					<p class="mt-1 text-sm text-secondary-500">Black</p>
-				  </div>
+					<Button block>Block</Button>
 				  <!--<p class="text-sm font-medium text-secondary-900">$35</p> -->
 				</div>
 			  </div>
@@ -492,15 +521,7 @@
 					<img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 				  </div>
 				  <div class="mt-4 flex justify-between">
-					<div>
-					  <h3 class="text-sm text-gray-700">
-						<a href="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg">
-						  <span aria-hidden="true" class="absolute inset-0"></span>
-						  Basic Tee
-						</a>
-					  </h3>
-					  <p class="mt-1 text-sm text-gray-500">Black</p>
-					</div>
+					<Button block>Block</Button>
 					<!--<p class="text-sm font-medium text-secondary-900">$35</p> -->
 				  </div>
 				</div>
@@ -510,15 +531,7 @@
 					<img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 				  </div>
 				  <div class="mt-4 flex justify-between">
-					<div>
-					  <h3 class="text-sm text-gray-700">
-						<a href="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg">
-						  <span aria-hidden="true" class="absolute inset-0"></span>
-						  Basic Tee
-						</a>
-					  </h3>
-					  <p class="mt-1 text-sm text-gray-500">Black</p>
-					</div>
+					<Button block>Block</Button>
 					<!--<p class="text-sm font-medium text-secondary-900">$35</p> -->
 				  </div>
 				</div>
@@ -528,15 +541,7 @@
 					<img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
 				  </div>
 				  <div class="mt-4 flex justify-between">
-					<div>
-					  <h3 class="text-sm text-gray-700">
-						<a href="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg">
-						  <span aria-hidden="true" class="absolute inset-0"></span>
-						  Basic Tee
-						</a>
-					  </h3>
-					  <p class="mt-1 text-sm text-gray-500">Black</p>
-					</div>
+					<Button block>Block</Button>
 					<!--<p class="text-sm font-medium text-secondary-900">$35</p> -->
 				  </div>
 				</div>
@@ -549,38 +554,49 @@
 		<div class="container">
 			<div class="bg-gray-100">
 				<div class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-400 lg:pt-6 lg:pb-16 lg:pr-8" >
-							<!-- Description and details -->
-							<div>
-							<h3 class="sr-only">Description</h3>
+							
 					
-							<div class="space-y-6">
-								<p class="text-base text-gray-900">The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: &quot;Black&quot;. Need to add an extra pop of color to your outfit? Our white tee has you covered.</p>
-							</div>
-							</div>
+							<Container>
+								<Row>
+									<Col>
+										<!-- Description and details -->
+										<div>
+										<h3 class="sr-only">Description</h3>
+						
+											<div class="space-y-6">
+												<p class="text-base text-gray-900">The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: &quot;Black&quot;. Need to add an extra pop of color to your outfit? Our white tee has you covered.</p>
+											</div>
+										</div>
+						
+										<div class="mt-10">
+										<h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+											<div class="mt-4">
+												<ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+												<li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+									
+												<li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
+									
+												<li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
+									
+												<li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
+												</ul>
+											</div>
+										</div>
 					
-							<div class="mt-10">
-							<h3 class="text-sm font-medium text-gray-900">Highlights</h3>
-					
-							<div class="mt-4">
-								<ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-								<li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
-					
-								<li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
-					
-								<li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
-					
-								<li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
-								</ul>
-							</div>
-							</div>
-					
-							<div class="mt-10">
-							<h2 class="text-sm font-medium text-gray-900">Details</h2>
-					
-							<div class="mt-4 space-y-6">
-								<p class="text-sm text-gray-600">The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited release.</p>
-							</div>
-							</div>
+										<div class="mt-10">
+										<h2 class="text-sm font-medium text-gray-900">Details</h2>
+								
+										<div class="mt-4 space-y-6">
+											<p class="text-sm text-gray-600">The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited release.</p>
+										</div>
+										</div>
+									</Col>
+									<Col>
+										<img src={bottles} />
+									</Col>
+								</Row>
+							</Container>
+						
 					</div>
 				</div>
 			</div>

@@ -15,7 +15,7 @@
   let open = false;
   const toggle = () => (open = !open);
   
-    const [red, green, blue] = [300, 200, 500];
+    const [red, green, blue] = [200, 200, 400];
     let backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   
     const handleProgress = (/** @type {number} */ progress) => {
@@ -141,55 +141,7 @@
       offset={1}
       onProgress={handleProgress}
     >
-      <!-- Product List -->
-    <div>
-      <Router>
-       <header>
-         <nav>
-         <Link to="/">Products</Link>
-         <Link to="about">Cart</Link>
-         </nav>
-       </header>
-       
-       <main>
-     
-         <Route path="/">
-           <p>There are {cart.length} items in your cart</p>
-           <div class="product-list">
-             {#each products as product}
-             <div>
-               <div class="image" style="background-image: url({product.image})"></div>
-             <h4>{product.name}</h4>
-             <p>${product.price}</p>
-             <button on:click={() => addToCart(product)}>Add to cart</button>
-             </div>
-             {/each}
-           </div>
-         </Route>
-       
-         <Route path="about">
-           <div class="cart-list">
-             {#each cart as item }
-               {#if item.quantity > 0}
-               <div class="cart-item">
-                 <img width="50" src={item.image} alt={item.name}/>
-                 <div>{item.quantity}
-                   <button on:click={() => plusItem(item)}>+</button>
-                   <button on:click={() => minusItem(item)}>-</button>
-                 </div>
-                 <p>₹{item.price * item.quantity}</p>
-               </div>
-               {/if}
-             {/each}
-             <div class="total">
-               <h4>Total: ₹ {total}</h4>
-             </div>
-           </div>
-         </Route>
-       </main>
-       </Router>
-   </div>
-    
+        
      
      <!-- Product List -->
       <Container >
@@ -458,12 +410,60 @@
       </div>
       <!--Grid row-->
   </div>
+  <!-- Product List -->
+  <div>
+    <Router>
+     <header>
+       <nav>
+       <Link to="/">Products</Link>
+       <Link to="about">Cart</Link>
+       </nav>
+     </header>
+     
+     <main>
+   
+       <Route path="/">
+         <p>There are {cart.length} items in your cart</p>
+         <div class="product-list">
+           {#each products as product}
+           <div>
+             <div class="image" style="background-image: url({product.image})"></div>
+           <h4>{product.name}</h4>
+           <p>${product.price}</p>
+           <button on:click={() => addToCart(product)}>Add to cart</button>
+           </div>
+           {/each}
+         </div>
+       </Route>
+     
+       <Route path="about">
+         <div class="cart-list">
+           {#each cart as item }
+             {#if item.quantity > 0}
+             <div class="cart-item">
+               <img width="50" src={item.image} alt={item.name}/>
+               <div>{item.quantity}
+                 <button on:click={() => plusItem(item)}>+</button>
+                 <button on:click={() => minusItem(item)}>-</button>
+               </div>
+               <p>₹{item.price * item.quantity}</p>
+             </div>
+             {/if}
+           {/each}
+           <div class="total">
+             <h4>Total: ₹ {total}</h4>
+           </div>
+         </div>
+       </Route>
+     </main>
+     </Router>
+ </div>
   
     </ParallaxLayer>
     
     <!--end of modal mode-->
     <hr>
-          <p class="text-center">Est. 1980</p><h1>The Infernalpepper Seeds Gallery </h1>
+          <p class="text-center">Est. 1980</p><h1>The Seeds Gallery </h1>
     <hr>
     <div class="mt-6 space-y-12 lg:grid lg:grid-cols-6 lg:gap-x-6 lg:space-y-0">
 		  <div class="group relative">
@@ -726,79 +726,95 @@
 
     <!--end of modal mode-->
 
+    <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collectibles</h1></Button>
+
   </Parallax>
 
-  <Container>
-    <Row>
-      <Col xs="6">
-        <div class="text-column">
-          <h1>About this app</h1>
+  <div class="bg-gray-100">
+    <div class="mt-6 mb-6">
+      <Container>
+        <Row>
+          <Col xs="6">
+            <div class="text-column">
+              <h1>About this app</h1>
+            
+              <p>
+                This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
+                following into your command line and following the prompts:
+              </p>
+            
+              <pre>npm create svelte@latest</pre>
+            
+              <p>
+                The page you're looking at is purely static HTML, with no client-side interactivity needed.
+                Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
+                the devtools network panel and reloading.
+              </p>
+            
+              <p>
+                The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
+                using it with JavaScript disabled!
+              </p>
+            </div>
+            <div>
+              <button class="btn btn-primary">
+              Button	
+              </button>
+            </div>
+          </Col>
+          <Col xs="6">
+            <!-- animation -->
+            <div class="mt-15 mb-6"> 
+              <div>
+                <h1></h1>
+                <h1></h1>
+                <h1></h1>
+              </div>
+              <div class='board'>
+                <input
+                  placeholder="what needs to be done?"
+                  on:keydown={e => e.key === 'Enter' && add(e.target)}
+                >
         
-          <p>
-            This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-            following into your command line and following the prompts:
-          </p>
+                <div class='left'>
+                  <h2>todo</h2>
+                  {#each todos.filter(t => !t.done) as todo (todo.id)}
+                    <label
+                      in:receive="{{key: todo.id}}"
+                      out:send="{{key: todo.id}}"
+                    >
+                      <input type=checkbox on:change={() => mark(todo, true)}>
+                      {todo.description}
+                      <button on:click="{() => remove(todo)}">remove</button>
+                    </label>
+                  {/each}
+                </div>
         
-          <pre>npm create svelte@latest</pre>
-        
-          <p>
-            The page you're looking at is purely static HTML, with no client-side interactivity needed.
-            Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-            the devtools network panel and reloading.
-          </p>
-        
-          <p>
-            The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-            using it with JavaScript disabled!
-          </p>
-        </div>
-        <div>
-          <button class="btn btn-primary">
-          Button	
-          </button>
-        </div>
-      </Col>
-      <Col xs="6">
-        <!-- animation -->
-        <div class='board'>
-          <input
-            placeholder="what needs to be done?"
-            on:keydown={e => e.key === 'Enter' && add(e.target)}
-          >
+                <div class='right'>
+                  <h2>done</h2>
+                  {#each todos.filter(t => t.done) as todo (todo.id)}
+                    <label
+                      class="done"
+                      in:receive="{{key: todo.id}}"
+                      out:send="{{key: todo.id}}"
+                    >
+                      <input type=checkbox checked on:change={() => mark(todo, false)}>
+                      {todo.description}
+                      <button on:click="{() => remove(todo)}">remove</button>
+                    </label>
+                  {/each}
+                </div>
+              </div>
+            </div>
+            
+            <!-- animation -->
+          </Col>
+        </Row>
+      </Container> 
+    </div>
+    
+  </div>
   
-          <div class='left'>
-            <h2>todo</h2>
-            {#each todos.filter(t => !t.done) as todo (todo.id)}
-              <label
-                in:receive="{{key: todo.id}}"
-                out:send="{{key: todo.id}}"
-              >
-                <input type=checkbox on:change={() => mark(todo, true)}>
-                {todo.description}
-                <button on:click="{() => remove(todo)}">remove</button>
-              </label>
-            {/each}
-          </div>
-  
-          <div class='right'>
-            <h2>done</h2>
-            {#each todos.filter(t => t.done) as todo (todo.id)}
-              <label
-                class="done"
-                in:receive="{{key: todo.id}}"
-                out:send="{{key: todo.id}}"
-              >
-                <input type=checkbox checked on:change={() => mark(todo, false)}>
-                {todo.description}
-                <button on:click="{() => remove(todo)}">remove</button>
-              </label>
-            {/each}
-          </div>
-        </div>
-        <!-- animation -->
-      </Col>
-    </Row>
-  </Container>
   
 
 <svelte:head>
