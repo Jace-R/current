@@ -2,6 +2,9 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+	import home from '$lib/images/home.png';
+	import contact from '$lib/images/contact.png';
+
 	import Hamburger from './Hamburger.svelte';
 	import Sidebar from './Sidebar.svelte';
 	import {
@@ -19,6 +22,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	
 	
+
+
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
@@ -28,10 +33,10 @@
 				<a href="/">Home</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/landing') ? 'page' : undefined}>
-				<a href="/landing">Menu</a>
+				<a href="/menu">Menu</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/cartwheel') ? 'page' : undefined}>
-				<a href="/cartwheel">Seeds</a>
+				<a href="/hotsauce">Seeds</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/seeds') ? 'page' : undefined}>
 				<a href="/seeds">Hot Sauce</a>
@@ -43,8 +48,14 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+		<a href="./about">
+			<img src={home} alt="SvelteKit" />
+		</a>
+	</div>
+
+	<div class="corner">
+		<a href="./contact">
+			<img src={contact} alt="GitHub" />
 		</a>
 	</div>
 
@@ -60,10 +71,12 @@
 		<DropdownToggle color="light" caret>Sign In</DropdownToggle>
 		<DropdownMenu>
 		  <DropdownItem header>Manage your Account</DropdownItem>
-		  <DropdownItem>Profile</DropdownItem>
+		  <DropdownItem>
+			<a href="./account" >Profile</a></DropdownItem>
 		  <DropdownItem>Settings</DropdownItem>
 		  <DropdownItem divider />
-		  <DropdownItem>Account</DropdownItem>
+		  <DropdownItem>
+			<a href="./login" >Account</a></DropdownItem>
 		  <DropdownItem>Sign Out</DropdownItem>
 		</DropdownMenu>
 	  </ButtonDropdown>

@@ -14,8 +14,6 @@
 <div class="app">
 	<Header />
 
-	<button on:click={() => sidebar_show = !sidebar_show}><p>Infernalpepper.com</p></button>
-
 	<Sidebar bind:show={sidebar_show} />
 
 	<main>
@@ -27,65 +25,23 @@
 	<!-- Footer -->
 	<footer>
 		<!-- Footer Links -->
-		<div class="container text-center text-md-left">
+		<div class="container text-justify text-md-left bg-gray-300">
 
-			<!-- Footer links -->
-			<div class="row text-center text-md-left pb-1">
-		
-			  <!-- Grid column -->
-			  <div class="col-md-3 col-lg-3 col-xl-3 mx-auto ">
-				<a href="./landing" >MyCreations</a>
+			<div class="col-lg-12 text-lg-center btn-wrapper ">
+				<a href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" >
+				  <i class="fa fa-twitter"></i>
+				</a>
+				<a href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" >
+				  <i class="fa fa-facebook-square"></i>
+				</a>
+				<a href="https://dribbble.com/creativetim" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" >
+				  <i class="fa fa-dribbble"></i>
+				</a>
+				<a href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" >
+				  <i class="fa fa-github"></i>
+				</a>
 			  </div>
-			  <!-- Grid column -->
-		
-			  <hr class="w-100 clearfix d-md-none">
-		
-			  <!-- Grid column -->
-			  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-				<a href="./login" >Checkout</a>
-			  </div>
-			  <!-- Grid column -->
-		
-			  <hr class="w-100 clearfix d-md-none">
-		
-			  <!-- Grid column -->
-			  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto ">
-				<a href="./account" >Your Account</a>
-			  </div>
-		
-			  <!-- Grid column -->
-			  <hr class="w-100 clearfix d-md-none">
-		
-			  <!-- Grid column -->
-			  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto ">
-				<a href="./contact" >Contact</a>
-			  </div>
-			  <!-- Grid column -->
-		
-			</div>
-			<!-- Footer links -->
-		
-			<hr>
-	<!-- Grid row -->
-    <div class="row d-flex align-items-center">
-  
-		  <div class="col-lg-6 text-lg-center btn-wrapper ">
-			<a href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" >
-			  <i class="fa fa-twitter"></i>
-			</a>
-			<a href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" >
-			  <i class="fa fa-facebook-square"></i>
-			</a>
-			<a href="https://dribbble.com/creativetim" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" >
-			  <i class="fa fa-dribbble"></i>
-			</a>
-			<a href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" >
-			  <i class="fa fa-github"></i>
-			</a>
-		  </div>
-  
-	</div>
-	<!-- Grid row -->
+
     <!-- Footer Links -->
 	<!-- Copyright -->
 	<div class="footer-copyright text-center py-1 ">© 2022 Copyright:
@@ -139,8 +95,8 @@
 	}
 
 	:global(body){
-        background-color: rgb(168, 162, 107);
-        background-image: url("$lib/images/sauce.gif");
+        background-color: rgb(181, 139, 206);
+        background-image: url("$lib/images/bottles.png");
     }
 
 </style>

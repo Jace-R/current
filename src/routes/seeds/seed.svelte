@@ -3,6 +3,11 @@
   import { Col, Container, Row } from 'sveltestrap';
   import { quintOut } from "svelte/easing";
   import { Popover } from 'sveltestrap';
+
+  import { Router, Route, Link } from "svelte-navigator";
+  import Seed from './seed.svelte';
+	let visible = false;
+
   import {
     Carousel,
     CarouselControl,
@@ -93,6 +98,17 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
 </svelte:head>
+
+<label>
+	<input type="checkbox" bind:checked={visible}>
+	<p class="text-white">Hot Sauce Gallery </p>
+</label>
+
+{#if visible}
+	<div transition:fly="{{ y: 200, duration: 2000 }}">
+		<p>> Collectibles </p>
+  </div>
+{/if}
 
 <!-- Carousel -->
 <div class="bg-gray-100">

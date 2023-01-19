@@ -6,6 +6,16 @@
 	import { Router, Route, Link } from "svelte-navigator";
 	import { Col, Container, Row } from 'sveltestrap';
 	import Blog from './Blog.svelte';
+	import {
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    CardHeader,
+    CardSubtitle,
+    CardText,
+    CardTitle
+  } from 'sveltestrap';
 
 </script>
 
@@ -16,90 +26,108 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-	</h1>
+	
 
-	<h1></h1>
-	<h1></h1>
-	<h1></h1>
-	<h1></h1>
-	<h1></h1>
-	<h1></h1>
 
 </section>
 
-	  
-
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+	  <h1></h1>
+<section>
+	<div class="col ">
+		<div class="cards">
+			<div>
+				<h1 class="text-center">Mango Madness</h1>
+			</div>
+			<div>
+				<p class="text-center">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border.</p>
+			</div>
+			<p class="text-center">5 mL.</p>
+			<p class="text-center">© 2022 Licensed</p>
+		</div>
+		<div class="cards">
+			<div>
+				<h1 class="text-center">Berry Peach Lava</h1>
+			</div>
+			<div>
+				<p class="text-center">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border.</p>
+			</div>
+			<p class="text-center">5 mL.</p>
+			<p class="text-center">© 2022 Licensed</p>
+		</div><div class="cards">
+			<div>
+				<h1 class="text-center">Pineapple Starburst</h1>
+			</div>
+			<div>
+				<p class="text-center">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border.</p>
+			</div>
+			<p class="text-center">5 mL.</p>
+			<p class="text-center">© 2022 Licensed</p>
+		</div>
+	</div>
+</section>
 <section >
-	<Router>
-		<header class="text-center">
-		  <h2>Infernalpeppers</h2>
-	  
-		  <nav >
-			<Link to="/" class="text-white">Seeds</Link>
-			<Link to="pepper" class="text-white">Pepper's Feature</Link>
-			<Link to="blog" class="text-white">Hot Sauce</Link>
-		  </nav>
-		</header>
-	  
-		<main>
-		  <Route path="blog/*blogRoute" component={Blog} />
-	  
-		  <Route path="/">
-			<Container>
-				<Row>
-					<Col sm="12" md={{ size: 6, offset: 3 }} class="text-center" >
-						lemonstarburst, jay's peach scorpion, trinidad scorpion, scotch bonnet
-					</Col>
-				</Row>
-				<Row>
-					<Col sm="12" md={{ size: 6, offset: 3 }} class="text-center">
-					      5 mL
-					</Col>
-				</Row>
-			</Container>
-		  </Route>
-	  
-		  <Route path="pepper">
-			<Container>
-				<Row>
-					<Col sm="12" md={{ size: 6, offset: 3 }} class="text-center">
-					     ordinary, mild, hot, super hot, extremely hot
-					</Col>
-				</Row>
-				<Row>
-					<Col sm="12" md={{ size: 6, offset: 3 }} class="text-center">
-					      5 mL
-					</Col>
-				</Row>
-			</Container>
-		  </Route>
-		</main>
-	</Router>
 
-		<section>
-			<h1></h1>
-			<h1></h1>
-			<h1></h1>
-			<h1></h1>
-			<h1></h1>
-			<h1></h1>
-			<h1></h1>
-			<h1></h1>
-			<h1></h1>
-		</section> 
-
-	  <style>
-		  :global(:target) {
-	  
-		  background-color: papayawhip;}
-	  </style>
+	<style>
+	.cards {
+		background-color: lightgrey;
+		width: 400px;
+		border: 10px solid green;
+		padding: 5px;
+		margin: 0px;
+		display: inline-block;
+    	position: relative;
+		}
+	
+</style>
 </section>
 
 <style>

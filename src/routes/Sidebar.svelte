@@ -1,6 +1,7 @@
 {#if show}
   <nav transition:fly={{x: 250, opacity: 1}}>
     <button on:click={() => {modal_show = true; show = false;}}>About</button>
+    <a href="./contact" >Contact</a>
   </nav>
 {/if}
 
