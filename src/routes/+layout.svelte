@@ -25,7 +25,7 @@
 	<!-- Footer -->
 	<footer>
 		<!-- Footer Links -->
-		<div class="container text-justify text-md-left bg-gray-300">
+		<div class="container text-justify text-md-left bg-orange-200">
 
 			<div class="col-lg-12 text-lg-center btn-wrapper ">
 				<a href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" >
@@ -78,6 +78,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
+		
 		
 	}
 

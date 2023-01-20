@@ -109,7 +109,7 @@
 	<div transition:fly="{{ y: 200, duration: 2000 }}">
 		
     <!-- Carousel -->
-<div class="bg-gray-100">
+<div class="bg-gray-100 pt-5 pb-5">
 	<Container >
 		<Row>
 			<Col xs="6">
@@ -456,12 +456,137 @@
   </div>
  Product List -->
 
+ <!--Collectibles-->
+ <div class="card shadow border-2 mt-6 space-y-12 lg:grid lg:grid-cols-6 lg:gap-x-6 lg:space-y-0">
+    <div class="group relative">
+      <div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+      </div>
+    </div>
+</div>
+
+  <div class="bg-gray-100 justify-center">
+    <div class="mt-6 mb-6">
+      <Container class="justify-center pt-2 pb-2">
+		<Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collectibles</h1></Button>
+		<h1></h1>
+        <Row >
+          <Col xs="6">
+            <Row>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+
+            </Row>
+          </Col>
+          <Col xs="6">
+            <Row>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+
+            </Row>
+          </Col>
+        </Row>
+		<h1></h1>
+        <Row >
+          <Col xs="6">
+            <Row>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+
+            </Row>
+          </Col>
+          <Col xs="6">
+            <Row>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+
+            </Row>
+          </Col>
+        </Row>
+      </Container> 
+    </div>
+    
+  </div>
+  <!--Collectibles-->
+  
   
 <section>
 	<div class="bg-gray-100" >
-		<div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-6xl lg:px-8">
+		<div class="mx-auto max-w-2xl py-10 px-4 sm:py-24 sm:px-6 lg:max-w-6xl lg:px-8">
 			<div class="border border-style: solid;">
-				<Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collections</h1></Button>
+				<Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Red Pepper Seeds</h1></Button>
 			</div>
 		  <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 			<div class="group relative">
@@ -568,20 +693,32 @@
 											</div>
 										</div>
 						
-										<div class="mt-10">
-										<h3 class="text-sm font-medium text-gray-900">Highlights</h3>
-											<div class="mt-4">
-												<ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-												<li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
-									
-												<li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
-									
-												<li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
-									
-												<li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
-												</ul>
-											</div>
-										</div>
+										
+										<Col xs="6">
+											<Row>
+											  <Col>
+												<div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+												  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+												</div>
+											  </Col>
+											  <Col>
+												<div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+												  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+												</div>
+											  </Col>
+											  <Col>
+												<div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+												  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+												</div>
+											  </Col>
+											  <Col>
+												<div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+												  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+												</div>
+											  </Col>
+								
+											</Row>
+										  </Col>
 					
 										<div class="mt-10">
 										<h2 class="text-sm font-medium text-gray-900">Details</h2>
@@ -590,6 +727,31 @@
 											<p class="text-sm text-gray-600">The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited release.</p>
 										</div>
 										</div>
+										<Col xs="6">
+											<Row>
+											  <Col>
+												<div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+												  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+												</div>
+											  </Col>
+											  <Col>
+												<div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+												  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+												</div>
+											  </Col>
+											  <Col>
+												<div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+												  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+												</div>
+											  </Col>
+											  <Col>
+												<div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+												  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+												</div>
+											  </Col>
+								
+											</Row>
+										  </Col>
 									</Col>
 									<Col>
 										<img src={bottles} />

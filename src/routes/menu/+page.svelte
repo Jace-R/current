@@ -26,9 +26,11 @@
     Modal,
     ModalBody,
     ModalFooter,
-    ModalHeader
+    ModalHeader, 
+    Container, Row, Col
   } from 'sveltestrap';
   import { Popover } from 'sveltestrap';
+  import chilis from '$lib/images/chilis.png';
 
   let open = false;
   const toggle = () => (open = !open);
@@ -36,7 +38,7 @@
   import { Router, Route, Link } from "svelte-navigator";
   import Layer from './layer.svelte';
   import { fly } from 'svelte/transition';
-	let visible = false;
+	let visible = true;
 </script>
 
 <label>
@@ -75,20 +77,20 @@
         </nav>
     
         <!-- Image gallery -->
-        <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+        <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8 justify-content: center;">
           <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="card h-full w-full shadow border-3 object-cover object-center">
           </div>
           <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
             <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
+              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
             </div>
             <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
+              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
             </div>
           </div>
           <div class="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center">
+            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
           </div>
         </div>
     
@@ -157,7 +159,7 @@
                     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
                       <input type="radio" name="color-choice" value="Yellow" class="sr-only" aria-labelledby="color-choice-0-label">
                       <span id="color-choice-0-label" class="sr-only"> Yellow </span>
-                      <span aria-hidden="true" class="h-8 w-8 bg-white border border-black border-opacity-10 rounded-full"></span>
+                      <span aria-hidden="true" class="h-8 w-8 bg-orange-200  border border-black border-opacity-10 rounded-full"></span>
                     </label>
     
                     <!--
@@ -167,7 +169,7 @@
                     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
                       <input type="radio" name="color-choice" value="Orange" class="sr-only" aria-labelledby="color-choice-1-label">
                       <span id="color-choice-1-label" class="sr-only"> Orange </span>
-                      <span aria-hidden="true" class="h-8 w-8 bg-gray-200 border border-black border-opacity-10 rounded-full"></span>
+                      <span aria-hidden="true" class="h-8 w-8  bg-orange-400 border border-black border-opacity-10 rounded-full"></span>
                     </label>
     
                     <!--
@@ -177,7 +179,7 @@
                     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
                       <input type="radio" name="color-choice" value="Red" class="sr-only" aria-labelledby="color-choice-2-label">
                       <span id="color-choice-2-label" class="sr-only"> Red </span>
-                      <span aria-hidden="true" class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
+                      <span aria-hidden="true" class="h-8 w-8 bg-red-500 border border-black border-opacity-10 rounded-full"></span>
                     </label>
 
                     <!--
@@ -187,7 +189,7 @@
                     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
                       <input type="radio" name="color-choice" value="Purple" class="sr-only" aria-labelledby="color-choice-2-label">
                       <span id="color-choice-2-label" class="sr-only"> Purple </span>
-                      <span aria-hidden="true" class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
+                      <span aria-hidden="true" class="h-8 w-8 bg-blue-900 border border-black border-opacity-10 rounded-full"></span>
                     </label>
 
                     <!--
@@ -197,7 +199,7 @@
                     <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
                       <input type="radio" name="color-choice" value="Brown" class="sr-only" aria-labelledby="color-choice-2-label">
                       <span id="color-choice-2-label" class="sr-only"> Brown </span>
-                      <span aria-hidden="true" class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
+                      <span aria-hidden="true" class="h-8 w-8 bg-orange-900 border border-black border-opacity-10 rounded-full"></span>
                     </label>
                   </div>
                 </fieldset>
@@ -386,8 +388,9 @@
         <!-- Image gallery -->
         <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
           <div class="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
+            <p  >src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
             <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
-            <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
+            <hr>
             <hr>
             <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
             <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
@@ -396,14 +399,14 @@
           </div>
           <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
             <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
+              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="card shadow border-3 h-full w-full object-cover object-center">
             </div>
             <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
+              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="card shadow border-3 h-full w-full object-cover object-center">
             </div>
           </div>
           <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="card shadow border-3 h-full w-full object-cover object-center">
           </div>
         </div>
     
@@ -422,23 +425,46 @@
                 <p class="text-base text-gray-900">The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: &quot;Black&quot;. Need to add an extra pop of color to your outfit? Our white tee has you covered.</p>
               </div>
             </div>
-    
             <div class="mt-10">
               <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
-    
-              <div class="mt-4">
-                <!-- svelte-ignore a11y-no-redundant-roles -->
-                <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-                  <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
-    
-                  <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
-    
-                  <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
-    
-                  <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
-                </ul>
+            <Container>
+                <Row>
+                  <Col>
+                    
+                        <div class="mt-4">
+                        <!-- svelte-ignore a11y-no-redundant-roles -->
+                        <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                          <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+            
+                          <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
+            
+                          <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
+            
+                          <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
+                        </ul>
+                      </div>
+                    
+                  </Col>
+                  <Col>
+  
+                        <div class="mt-4">
+                        <!-- svelte-ignore a11y-no-redundant-roles -->
+                        <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                          <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+            
+                          <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
+            
+                          <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
+            
+                          <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
+                        </ul>
+                      </div>
+                    
+                  </Col>
+                
+                </Row>
+              </Container>
               </div>
-            </div>
     
             <div class="mt-10">
               <h2 class="text-sm font-medium text-gray-900">Details</h2>
@@ -449,8 +475,8 @@
             </div>
           </div>
     
-          <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+          <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center shadow border-2 ">
           </div>
         </div>
       </div>
@@ -487,7 +513,7 @@
       </nav>
       <!-- Image gallery -->
       <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-        <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+        <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
           <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
         </div>
         <div class="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
@@ -501,10 +527,10 @@
           <Button block>Block</Button>
         </div>
         <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-          <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
+          <div class="card shadow border-3 aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
             <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
           </div>
-          <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
+          <div class="card shadow border-3 aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
             <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
           </div>
         </div>
@@ -529,20 +555,44 @@
   
           <div class="mt-10">
             <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
-  
-            <div class="mt-4">
-              <!-- svelte-ignore a11y-no-redundant-roles -->
-              <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-                <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
-  
-                <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
-  
-                <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
-  
-                <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
-              </ul>
+          <Container>
+              <Row>
+                <Col>
+                  
+                      <div class="mt-4">
+                      <!-- svelte-ignore a11y-no-redundant-roles -->
+                      <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                        <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+          
+                        <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
+          
+                        <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
+          
+                        <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
+                      </ul>
+                    </div>
+                  
+                </Col>
+                <Col>
+
+                      <div class="mt-4">
+                      <!-- svelte-ignore a11y-no-redundant-roles -->
+                      <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                        <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+          
+                        <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
+          
+                        <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
+          
+                        <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
+                      </ul>
+                    </div>
+                  
+                </Col>
+              
+              </Row>
+            </Container>
             </div>
-          </div>
   
           <div class="mt-10">
             <h2 class="text-sm font-medium text-gray-900">Details</h2>
@@ -553,20 +603,145 @@
           </div>
         </div>
   
-        <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-          <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+        <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+          <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="card h-full w-full object-cover object-center">
         </div>
       </div>
     </div>
   </div>
   <!--section four-->  
+
+   <!--Collectibles-->
+ <div class="card shadow border-2 mt-6 space-y-12 lg:grid lg:grid-cols-6 lg:gap-x-6 lg:space-y-0">
+  <div class="group relative">
+    <div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+      <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+    </div>
+  </div>
+</div>
+
+<div class="bg-gray-100 justify-center">
+  <div class="mt-6 mb-6">
+    <Container class="justify-center pt-2 pb-2">
+  <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collectibles</h1></Button>
+  <h1></h1>
+      <Row >
+        <Col xs="6">
+          <Row>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+
+          </Row>
+        </Col>
+        <Col xs="6">
+          <Row>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+
+          </Row>
+        </Col>
+      </Row>
+  <h1></h1>
+      <Row >
+        <Col xs="6">
+          <Row>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+
+          </Row>
+        </Col>
+        <Col xs="6">
+          <Row>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+            <Col>
+              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+              </div>
+            </Col>
+
+          </Row>
+        </Col>
+      </Row>
+    </Container> 
+  </div>
+  
+</div>
+<!--Collectibles-->
   
   <!-- Packages for Hot Sauces-->
   
   <div class="bg-gray-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-        <h2 class="text-2xl font-bold text-gray-900">On Specials</h2>
+        <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Hot Sauce Madness</h1></Button>
   
         <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
           <div class="group relative">
@@ -703,4 +878,10 @@
   </div>
 {/if}
 
+<style>
+  .card:hover{
+    box-shadow: 8px 8px 8px rgb(181, 92, 253);
+    transform:scale(1.2);
+}
 
+</style>

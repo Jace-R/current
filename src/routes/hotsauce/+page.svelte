@@ -76,6 +76,7 @@
 	import { Col, Container, Row } from 'sveltestrap';
 	import { quintOut } from 'svelte/easing';
 	import { crossfade } from 'svelte/transition';
+	import Counter from '$routes/Counter.svelte';
 
 	const [send, receive] = crossfade({
 		duration: d => Math.sqrt(d * 200),
@@ -168,11 +169,6 @@
                 using it with JavaScript disabled!
               </p>
             </div>
-            <div>
-              <button class="btn btn-primary">
-              Button	
-              </button>
-            </div>
           </Col>
           <Col xs="6">
             <!-- right column -->
@@ -205,53 +201,41 @@
   
 <div class="container-fluid" >
   <div class="pt-2">
-    <nav aria-label="Breadcrumb">
-      <ol role="list" class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <li>
-          <div class="flex items-center">
-            <a href="#" class="mr-2 text-sm font-medium text-gray-900">Men</a>
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-4 text-gray-300">
-              <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-          </div>
-        </li>
-
-        <li>
-          <div class="flex items-center">
-            <a href="#" class="mr-2 text-sm font-medium text-gray-900">Clothing</a>
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-4 text-gray-300">
-              <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-          </div>
-        </li>
-
-        <li class="text-sm">
-          <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Basic Tee 6-Pack</a>
-        </li>
-      </ol>
-    </nav>
-
     <!-- Image gallery -->
     <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-      <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+      <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
         <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
       </div>
       <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-        <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
+        <div class="card shadow border-3 aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
           <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
         </div>
-        <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
+        <div class="card shadow border-3 aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
           <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
         </div>
       </div>
       <div class="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
-        <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
-        <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
-        <hr>
-        <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
-        <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
-        
-        <Button block>Block</Button>
+        <Container>
+          <Row>
+            <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
+          <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
+          <hr>
+          </Row>
+          <Row>
+            <hr>
+          <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
+          <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
+          
+
+            <Button id="btn">Click me</Button>
+            <Popover placement="right" target="btn">
+              <div slot="title">
+                <i>Hello</i> <b>World!</b>
+              </div>
+              This Popover has HTML in the title passed as a slot.
+            </Popover>
+          </Row>
+        </Container>
       </div>
     </div>
 
@@ -273,19 +257,63 @@
 
         <div class="mt-10">
           <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+        <Container>
+            <Row>
+              <Col>
+                
+                    <div class="mt-4">
+                    <!-- svelte-ignore a11y-no-redundant-roles -->
+                    <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                      <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+        
+                      <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
+        
+                      <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
+        
+                      <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
+                    </ul>
+                  </div>
+                
+              </Col>
+              <Col>
 
-          <div class="mt-4">
-            <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-              <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+                    <div class="mt-4">
+                    <!-- svelte-ignore a11y-no-redundant-roles -->
+                    <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                      <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+        
+                      <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
+        
+                      <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
+        
+                      <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
+                    </ul>
+                  </div>
+                
+              </Col>
+            
+            </Row>
+            <Row>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
 
-              <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
-
-              <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
-
-              <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
-            </ul>
+            </Row>
+          </Container>
           </div>
-        </div>
+
 
         <div class="mt-10">
           <h2 class="text-sm font-medium text-gray-900">Details</h2>
@@ -296,7 +324,7 @@
         </div>
       </div>
 
-      <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+      <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
         <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
       </div>
     </div>
@@ -304,6 +332,11 @@
 </div>
 
  <!--section2-->
+ <div>
+   <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collectibles</h1></Button>
+ </div>
+
+  <h1></h1>
   <!--Grid row-->
   <div class="gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 xl:gap-x-8">
     <div class="row text-center" >
@@ -410,6 +443,7 @@
       </div>
       <!--Grid row-->
   </div>
+
   <!-- Product List -->
   <div>
     <Router>
@@ -463,7 +497,7 @@
     
     <!--end of modal mode-->
     <hr>
-          <p class="text-center">Est. 1980</p><h1>The Seeds Gallery </h1>
+          <p class=" heading text-center ">Est. 1980</p><h1 class="heading">The Seeds Gallery </h1>
     <hr>
     <div class="mt-6 space-y-12 lg:grid lg:grid-cols-6 lg:gap-x-6 lg:space-y-0">
 		  <div class="group relative">
@@ -726,41 +760,47 @@
 
     <!--end of modal mode-->
 
-    <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collectibles</h1></Button>
+    
+    
 
   </Parallax>
 
-  <div class="bg-gray-100">
+  <div class="card shadow border-2 mt-6 space-y-12 lg:grid lg:grid-cols-6 lg:gap-x-6 lg:space-y-0">
+    <div class="group relative">
+      <div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-100 justify-center">
     <div class="mt-6 mb-6">
-      <Container>
-        <Row>
+      <Container class="justify-center">
+        <Row >
           <Col xs="6">
-            <div class="text-column">
-              <h1>About this app</h1>
-            
-              <p>
-                This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-                following into your command line and following the prompts:
-              </p>
-            
-              <pre>npm create svelte@latest</pre>
-            
-              <p>
-                The page you're looking at is purely static HTML, with no client-side interactivity needed.
-                Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-                the devtools network panel and reloading.
-              </p>
-            
-              <p>
-                The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-                using it with JavaScript disabled!
-              </p>
-            </div>
-            <div>
-              <button class="btn btn-primary">
-              Button	
-              </button>
-            </div>
+            <Row>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+              <Col>
+                <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
+                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                </div>
+              </Col>
+
+            </Row>
           </Col>
           <Col xs="6">
             <!-- animation -->
@@ -825,6 +865,15 @@
 
 
   <style>
+    .heading {
+      font-family: 'Courier New', monospace;
+      font-weight: bold
+    }
+    .card:hover{
+    box-shadow: 8px 8px 8px blue;
+    transform:scale(1.2);
+    }
+
     .product-list, .cart-item {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
