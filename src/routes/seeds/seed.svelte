@@ -1,4 +1,50 @@
 <script lang="ts">
+
+import p1 from '$lib/images/peppers/1.jpg'
+  import p2 from '$lib/images/peppers/2.jpg'
+  import p3 from '$lib/images/peppers/3.jpg'
+  import p4 from '$lib/images/peppers/4.jpg'
+  import p5 from '$lib/images/peppers/5.jpg'
+  import p6 from '$lib/images/peppers/6.jpg'
+  import p7 from '$lib/images/peppers/7.jpg'
+  import p8 from '$lib/images/peppers/7.jpg'
+  import p9 from '$lib/images/peppers/8.jpg'
+  import p10 from '$lib/images/peppers/10.jpg'
+  import p11 from '$lib/images/peppers/11.jpg'
+  import p12 from '$lib/images/peppers/12.jpg'
+  import p13 from '$lib/images/peppers/13.jpg'
+  import p14 from '$lib/images/peppers/14.jpg'
+  import p15 from '$lib/images/peppers/15.jpg'
+  import p16 from '$lib/images/peppers/16.jpg'
+  import p17 from '$lib/images/peppers/17.jpg'
+  import p18 from '$lib/images/peppers/18.jpg'
+  import p19 from '$lib/images/peppers/19.jpg'
+  import p20 from '$lib/images/peppers/20.jpg'
+  import p21 from '$lib/images/peppers/21.jpg'
+  import p22 from '$lib/images/peppers/22.jpg'
+  import p23 from '$lib/images/peppers/23.jpg'
+  import p24 from '$lib/images/peppers/24.jpg'
+  import p25 from '$lib/images/peppers/25.jpg'
+  import p26 from '$lib/images/peppers/26.jpg'
+  import p27 from '$lib/images/peppers/27.jpg'
+  import p28 from '$lib/images/peppers/28.jpg'
+  import p29 from '$lib/images/peppers/29.jpg'
+  import p30 from '$lib/images/peppers/30.jpg'
+  import p31 from '$lib/images/peppers/31.jpg'
+  import p32 from '$lib/images/peppers/32.jpg'
+  import p33 from '$lib/images/peppers/33.jpg'
+  import p34 from '$lib/images/peppers/34.jpg'
+  import p35 from '$lib/images/peppers/35.jpg'
+  import p36 from '$lib/images/peppers/36.jpg'
+  import p37 from '$lib/images/peppers/37.jpg'
+  import p38 from '$lib/images/peppers/38.jpg'
+  import p39 from '$lib/images/peppers/39.jpg'
+  import p40 from '$lib/images/peppers/40.jpg'
+  import p41 from '$lib/images/peppers/41.jpg'
+  import p42 from '$lib/images/peppers/42.jpg'
+  import p43 from '$lib/images/peppers/43.jpg'
+  import p44 from '$lib/images/peppers/44.jpg'
+
   import { fade, blur, fly, slide, scale } from "svelte/transition";
   import { Col, Container, Row } from 'sveltestrap';
   import { quintOut } from "svelte/easing";
@@ -35,9 +81,9 @@
   }, 1000);
 
     const items = [
-		"https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg",
-		"https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
-		"https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg"
+		p40,
+		p39,
+		p41
   ];
   let activeIndex = 0;
 
@@ -193,7 +239,7 @@
                   <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" class="h-full w-full object-cover object-center">
                 </div>
                 <div class="h-64 w-44 overflow-hidden rounded-lg">
-                  <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" class="h-full w-full object-cover object-center">
+                  <img src={p33} alt="" class="h-full w-full object-cover object-center">
                 </div>
                 <div class="h-64 w-44 overflow-hidden rounded-lg">
                   <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" class="h-full w-full object-cover object-center">
@@ -224,7 +270,7 @@
 <div class="bg-gray-100">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 	  <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-		<h2 class="text-2xl font-bold text-gray-900">On Specials</h2>
+		<h2 class="text-2xl font-bold text-gray-900">Selections</h2>
   
 		<div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
 		  <div class="group relative">

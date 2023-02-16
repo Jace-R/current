@@ -97,7 +97,7 @@
 
 	:global(body){
         background-color: rgb(181, 139, 206);
-        background-image: url("$lib/images/bottles.png");
+        background-image: url("$lib/images/peppers/18.jpg");
     }
 
 </style>

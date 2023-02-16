@@ -39,12 +39,7 @@
 	let visible = false;
 </script>
 
-<label>
-	<input type="checkbox" bind:checked={visible} class="text-white">
-	Collections
-</label>
 
-{#if visible}
 	<div transition:fly="{{ y: 200, duration: 2000 }}">
 		<div class="bg-gray-100">
       <div class="pt-6">
@@ -681,6 +676,6 @@
   </div>
 
   </div>
-{/if}
+
 
 

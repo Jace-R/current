@@ -4,9 +4,11 @@
 	import github from '$lib/images/github.svg';
 	import home from '$lib/images/home.png';
 	import contact from '$lib/images/contact.png';
+	import seeds from '$lib/images/seeds.png';
+	import menu from '$lib/images/menu.png';
+	import sauce from '$lib/images/sauce.png';
 
-	import Hamburger from './Hamburger.svelte';
-	import Sidebar from './Sidebar.svelte';
+	
 	import {
     ButtonDropdown,
     DropdownItem,
@@ -21,34 +23,27 @@
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	
-	
 
+	<div class="menu">
+		<a href="./menu">
+			<img width=40px height=40px src={menu} alt="SvelteKit" />
+		</a>
+	</div>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/landing') ? 'page' : undefined}>
-				<a href="/menu">Menu</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/cartwheel') ? 'page' : undefined}>
-				<a href="/hotsauce">Seeds</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/seeds') ? 'page' : undefined}>
-				<a href="/seeds">Hot Sauce</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
+	<div class="seeds">
+		<a href="./hotsauce">
+			<img width=40px height=40px src={seeds} alt="SvelteKit" />
+		</a>
+	</div>
+
+	<div class="hotsauce">
+		<a href="./seeds">
+			<img width=40px height=40px src={sauce} alt="SvelteKit" />
+		</a>
+	</div>
 
 	<div class="corner">
-		<a href="./about">
+		<a href="/">
 			<img src={home} alt="SvelteKit" />
 		</a>
 	</div>

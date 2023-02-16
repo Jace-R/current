@@ -21,6 +21,55 @@
 -->
 
 <script>
+  import p1 from '$lib/images/peppers/1.jpg'
+  import p2 from '$lib/images/peppers/2.jpg'
+  import p3 from '$lib/images/peppers/3.jpg'
+  import p4 from '$lib/images/peppers/4.jpg'
+  import p5 from '$lib/images/peppers/5.jpg'
+  import p6 from '$lib/images/peppers/6.jpg'
+  import p7 from '$lib/images/peppers/7.jpg'
+  import p8 from '$lib/images/peppers/7.jpg'
+  import p9 from '$lib/images/peppers/8.jpg'
+  import p10 from '$lib/images/peppers/10.jpg'
+  import p11 from '$lib/images/peppers/11.jpg'
+  import p12 from '$lib/images/peppers/12.jpg'
+  import p13 from '$lib/images/peppers/13.jpg'
+  import p14 from '$lib/images/peppers/14.jpg'
+  import p15 from '$lib/images/peppers/15.jpg'
+  import p16 from '$lib/images/peppers/16.jpg'
+  import p17 from '$lib/images/peppers/17.jpg'
+  import p18 from '$lib/images/peppers/18.jpg'
+  import p19 from '$lib/images/peppers/19.jpg'
+  import p20 from '$lib/images/peppers/20.jpg'
+  import p21 from '$lib/images/peppers/21.jpg'
+  import p22 from '$lib/images/peppers/22.jpg'
+  import p23 from '$lib/images/peppers/23.jpg'
+  import p24 from '$lib/images/peppers/24.jpg'
+  import p25 from '$lib/images/peppers/25.jpg'
+  import p26 from '$lib/images/peppers/26.jpg'
+  import p27 from '$lib/images/peppers/27.jpg'
+  import p28 from '$lib/images/peppers/28.jpg'
+  import p29 from '$lib/images/peppers/29.jpg'
+  import p30 from '$lib/images/peppers/30.jpg'
+  import p31 from '$lib/images/peppers/31.jpg'
+  import p32 from '$lib/images/peppers/32.jpg'
+  import p33 from '$lib/images/peppers/33.jpg'
+  import p34 from '$lib/images/peppers/34.jpg'
+  import p35 from '$lib/images/peppers/35.jpg'
+  import p36 from '$lib/images/peppers/36.jpg'
+  import p37 from '$lib/images/peppers/37.jpg'
+  import p38 from '$lib/images/peppers/38.jpg'
+  import p39 from '$lib/images/peppers/39.jpg'
+  import p40 from '$lib/images/peppers/40.jpg'
+  import p41 from '$lib/images/peppers/41.jpg'
+  import p42 from '$lib/images/peppers/42.jpg'
+  import p43 from '$lib/images/peppers/43.jpg'
+  import p44 from '$lib/images/peppers/44.jpg'
+  import spice1 from '$lib/images/peppers/spice1.png'
+  import spice2 from '$lib/images/peppers/spice2.jpg'
+
+  import Collections from './collections.svelte'
+
   import {
     Button,
     Modal,
@@ -41,20 +90,22 @@
 	let visible = true;
 </script>
 
-<label>
-	<input type="checkbox" bind:checked={visible} class="text-white">
-	<p class="text-white">Collections</p>
-</label>
 
-{#if visible}
 	<div transition:fly="{{ y: 200, duration: 2000 }}">
-		<div class="bg-gray-100">
+
+    <div class="container second mt-5 mb-5" style="background-image: url('{spice1}'); background-size: cover;">
+      <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Stinging Hot Peppers</h1></Button>
+    </div>
+
+
+		<div class="bg-red-100 mt-5">
+      
       <div class="pt-6">
         <nav aria-label="Breadcrumb">
           <ol role="list" class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
             <li>
               <div class="flex items-center">
-                <a href="./seeds" class="mr-2 text-sm font-medium text-gray-900">Seeds</a>
+                <a href="./hotsauce" class="mr-2 text-sm font-medium text-gray-900">Seeds</a>
                 <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-4 text-gray-300">
                   <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
                 </svg>
@@ -63,7 +114,7 @@
     
             <li>
               <div class="flex items-center">
-                <a href="./seeds" class="mr-2 text-sm font-medium text-gray-900">Mildly Hot Peppers</a>
+                <a href="./hotsauce" class="mr-2 text-sm font-medium text-gray-900">Mildly Hot Peppers</a>
                 <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-4 text-gray-300">
                   <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
                 </svg>
@@ -71,7 +122,7 @@
             </li>
     
             <li class="text-sm">
-              <a href="./seeds" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Collections</a>
+              <a href="./collections" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Collections</a>
             </li>
           </ol>
         </nav>
@@ -79,21 +130,25 @@
         <!-- Image gallery -->
         <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8 justify-content: center;">
           <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="card h-full w-full shadow border-3 object-cover object-center">
+            <img src={p14} alt="Two each of gray, white, and black shirts laying flat." class="card h-full w-full shadow border-3 object-cover object-center">
           </div>
           <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
             <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
+              <img src={p18} alt="Model wearing plain black basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
             </div>
             <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
+              <img src={p22} alt="Model wearing plain gray basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
             </div>
           </div>
           <div class="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
+            <img src={p40} alt="Model wearing plain white basic tee." class="card h-full w-full shadow border-3 object-cover object-center">
           </div>
         </div>
     
+        <div class="container second mt-5 mb-5" style="background-image: url('{spice1}'); background-size: cover;">
+          <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Yellow Pepper Sauce</h1></Button>
+        </div>
+
         <!-- Product info -->
         <div class="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
           <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
@@ -356,14 +411,22 @@
       </div>
     </div>
   
+    <div class="container second mt-5 mb-5" style="background-image: url('{spice1}'); background-size: cover;">
+      <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Blazingly Hot Peppers</h1></Button>
+    </div>
+
+
+
+
+
     <!--section three-->
-    <div class="bg-gray-100">
+    <div class="bg-red-100">
       <div class="pt-2">
         <nav aria-label="Breadcrumb">
           <ol role="list" class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
             <li>
               <div class="flex items-center">
-                <a href="./seeds" class="mr-2 text-sm font-medium text-gray-900">Seeds</a>
+                <a href="./hotsauce" class="mr-2 text-sm font-medium text-gray-900">Seeds</a>
                 <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-4 text-gray-300">
                   <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
                 </svg>
@@ -372,7 +435,7 @@
     
             <li>
               <div class="flex items-center">
-                <a href="./seeds" class="mr-2 text-sm font-medium text-gray-900">Hot Peppers</a>
+                <a href="./hotsauce" class="mr-2 text-sm font-medium text-gray-900">Hot Peppers</a>
                 <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-4 text-gray-300">
                   <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
                 </svg>
@@ -380,7 +443,7 @@
             </li>
     
             <li class="text-sm">
-              <a href="./seeds" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Collections</a>
+              <a href="./hotsauce" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Collections</a>
             </li>
           </ol>
         </nav>
@@ -399,17 +462,21 @@
           </div>
           <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
             <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="card shadow border-3 h-full w-full object-cover object-center">
+              <img src={p37} alt="Model wearing plain black basic tee." class="card shadow border-3 h-full w-full object-cover object-center">
             </div>
             <div class="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-              <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="card shadow border-3 h-full w-full object-cover object-center">
+              <img src={p23} alt="Model wearing plain gray basic tee." class="card shadow border-3 h-full w-full object-cover object-center">
             </div>
           </div>
           <div class="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="card shadow border-3 h-full w-full object-cover object-center">
+            <img src={p15} alt="Two each of gray, white, and black shirts laying flat." class="card shadow border-3 h-full w-full object-cover object-center">
           </div>
         </div>
     
+        <div class="container second mt-5 mb-5" style="background-image: url('{spice1}'); background-size: cover;">
+          <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Orange Pepper Sauce</h1></Button>
+        </div>
+
         <!-- Product info -->
         <div class="mx-auto max-w-2xl px-4 pt-5 pb-5 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
           <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
@@ -476,21 +543,25 @@
           </div>
     
           <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center shadow border-2 ">
+            <img src={p39} alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center shadow border-2 ">
           </div>
         </div>
       </div>
     </div>
   <!--section three-->  
   
+  <div class="container second mt-5 mb-5" style="background-image: url('{spice1}'); background-size: cover;">
+    <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Extremely Hot Peppers</h1></Button>
+  </div>
+
   <!--section four-->
-  <div class="bg-gray-100">
+  <div class="bg-red-100">
     <div class="pt-2">
       <nav aria-label="Breadcrumb">
         <ol role="list" class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <li>
             <div class="flex items-center">
-              <a href="./seeds" class="mr-2 text-sm font-medium text-gray-900">Seeds</a>
+              <a href="./hotsauce" class="mr-2 text-sm font-medium text-gray-900">Seeds</a>
               <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-4 text-gray-300">
                 <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
               </svg>
@@ -499,7 +570,7 @@
   
           <li>
             <div class="flex items-center">
-              <a href="./seeds" class="mr-2 text-sm font-medium text-gray-900">Super Hot Peppers</a>
+              <a href="./hotsauce" class="mr-2 text-sm font-medium text-gray-900">Super Hot Peppers</a>
               <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-5 w-4 text-gray-300">
                 <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
               </svg>
@@ -507,14 +578,14 @@
           </li>
   
           <li class="text-sm">
-            <a href="./seeds" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Collections</a>
+            <a href="./hotsauce" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Collections</a>
           </li>
         </ol>
       </nav>
       <!-- Image gallery -->
       <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
         <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-          <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+          <img src={p3} alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
         </div>
         <div class="aspect-w-4 aspect-h-5 sm:overflow-hidden sm:rounded-lg lg:aspect-w-3 lg:aspect-h-4">
           <p>src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center"</p>
@@ -528,15 +599,19 @@
         </div>
         <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
           <div class="card shadow border-3 aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
+            <img src={p16} alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
           </div>
           <div class="card shadow border-3 aspect-w-3 aspect-h-2 overflow-hidden rounded-lg">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
+            <img src={p17} alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
           </div>
         </div>
         
       </div>
   
+      <div class="container second mt-5 mb-5" style="background-image: url('{spice1}'); background-size: cover;">
+        <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Red Pepper Sauce</h1></Button>
+      </div>
+
       <!-- Product info -->
       <div class="mx-auto max-w-2xl px-4 pt-5 pb-5 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
         <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
@@ -604,7 +679,7 @@
         </div>
   
         <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-          <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="card h-full w-full object-cover object-center">
+          <img src={p42} alt="Two each of gray, white, and black shirts laying flat." class="card h-full w-full object-cover object-center">
         </div>
       </div>
     </div>
@@ -615,130 +690,19 @@
  <div class="card shadow border-2 mt-6 space-y-12 lg:grid lg:grid-cols-6 lg:gap-x-6 lg:space-y-0">
   <div class="group relative">
     <div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-      <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+      <img src={p22} alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
     </div>
   </div>
 </div>
 
-<div class="bg-gray-100 justify-center">
-  <div class="mt-6 mb-6">
-    <Container class="justify-center pt-2 pb-2">
-  <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collectibles</h1></Button>
-  <h1></h1>
-      <Row >
-        <Col xs="6">
-          <Row>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
 
-          </Row>
-        </Col>
-        <Col xs="6">
-          <Row>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-
-          </Row>
-        </Col>
-      </Row>
-  <h1></h1>
-      <Row >
-        <Col xs="6">
-          <Row>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-
-          </Row>
-        </Col>
-        <Col xs="6">
-          <Row>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-            <Col>
-              <div class="card shadow border-3 aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
-              </div>
-            </Col>
-
-          </Row>
-        </Col>
-      </Row>
-    </Container> 
-  </div>
-  
-</div>
+<!--Collectibles-->
+<Collections />
 <!--Collectibles-->
   
   <!-- Packages for Hot Sauces-->
   
-  <div class="bg-gray-100">
+  <div class="bg-red-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
         <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Hot Sauce Madness</h1></Button>
@@ -746,128 +710,67 @@
         <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
           <div class="group relative">
             <div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-              <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+              <img src={p22} alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
             </div>
             <h3 class="mt-6 text-sm text-gray-500">    
                 <div>
-                  <Button block color="secondary" on:click={toggle}>Pineapple Lemonstarburst</Button>
-                      <Modal isOpen={open} {toggle}>
-                        <ModalHeader {toggle}>Modal title</ModalHeader>
-                        <ModalBody>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua.
-                        </ModalBody>
-                        <ModalFooter>
-                          <Button color="primary" on:click={toggle}>Do Something</Button>
-                          <Button color="secondary" on:click={toggle}>Cancel</Button>
-                        </ModalFooter>
-                      </Modal>
+                  <Button block color="secondary" >Pineapple Lemonstarburst</Button>
                 </div>
           </div>
   
           <div class="group relative">
             <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-              <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+              <img src={p16} alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
             </div>
             <h3 class="mt-6 text-sm text-gray-500">
               <div>
-                <Button block color="secondary" on:click={toggle}>Strawberry Inferno</Button>
-                    <Modal isOpen={open} {toggle}>
-                      <ModalHeader {toggle}>Modal title</ModalHeader>
-                      <ModalBody>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                      </ModalBody>
-                      <ModalFooter>
-                        <Button color="primary" on:click={toggle}>Do Something</Button>
-                        <Button color="secondary" on:click={toggle}>Cancel</Button>
-                      </ModalFooter>
-                    </Modal>
+                <Button block color="secondary">Strawberry Inferno</Button>
+                    
               </div> 
           </div>
   
           <div class="group relative">
             <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-              <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
+              <img src={p12} alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
             </div>
             <h3 class="mt-6 text-sm text-gray-500">
               <div>
-                <Button block color="secondary" on:click={toggle}>Berry Peach Lava</Button>
-                    <Modal isOpen={open} {toggle}>
-                      <ModalHeader {toggle}>Modal title</ModalHeader>
-                      <ModalBody>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                      </ModalBody>
-                      <ModalFooter>
-                        <Button color="primary" on:click={toggle}>Do Something</Button>
-                        <Button color="secondary" on:click={toggle}>Cancel</Button>
-                      </ModalFooter>
-                    </Modal>
+                <Button block color="secondary" >Berry Peach Lava</Button>
+                    
               </div> 
           </div>
         </div>
     <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
       <div class="group relative">
         <div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+        <img src={p11} alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
         </div>
         <h3 class="mt-6 text-sm text-gray-500">
           <div>
-            <Button block color="secondary" on:click={toggle}>Pear Me</Button>
-                <Modal isOpen={open} {toggle}>
-                  <ModalHeader {toggle}>Modal title</ModalHeader>
-                  <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button color="primary" on:click={toggle}>Do Something</Button>
-                    <Button color="secondary" on:click={toggle}>Cancel</Button>
-                  </ModalFooter>
-                </Modal>
+            <Button block color="secondary" >Spare Me</Button>
+                
           </div> 
       </div>
   
       <div class="group relative">
         <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+        <img src={p17} alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
         </div>
         <h3 class="mt-6 text-sm text-gray-500">
           <div>
-            <Button block color="secondary" on:click={toggle}>Spare Me</Button>
-                <Modal isOpen={open} {toggle}>
-                  <ModalHeader {toggle}>Modal title</ModalHeader>
-                  <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button color="primary" on:click={toggle}>Do Something</Button>
-                    <Button color="secondary" on:click={toggle}>Cancel</Button>
-                  </ModalFooter>
-                </Modal>
+            <Button block color="secondary" >Chocolate Bites</Button>
+               
           </div>  
       </div>
   
       <div class="group relative">
         <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
+        <img src={p23} alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
         </div>
-        <h3 class="mt-6 text-sm text-gray-500">
+        <h3 class={"mt-6 text-sm text-gray-500"}>
           <div>
-            <Button block color="secondary" on:click={toggle}>Chocolate Bites</Button>
-                <Modal isOpen={open} {toggle}>
-                  <ModalHeader {toggle}>Modal title</ModalHeader>
-                  <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button color="primary" on:click={toggle}>Do Something</Button>
-                    <Button color="secondary" on:click={toggle}>Cancel</Button>
-                  </ModalFooter>
-                </Modal>
+            <Button block color="secondary" >Pear Me</Button>
+                
           </div>  
       </div>
       </div>
@@ -876,12 +779,27 @@
   </div>
 
   </div>
-{/if}
+
 
 <style>
   .card:hover{
     box-shadow: 8px 8px 8px rgb(181, 92, 253);
     transform:scale(1.2);
-}
+  }
+
+.container {
+	text-align: center;
+	color: var(--color);
+	width: 100%;
+	min-height: 15vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	
+	/*  this is where the magic happens:  */
+	background-attachment: fixed;
+	}
 
 </style>
