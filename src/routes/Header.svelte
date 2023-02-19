@@ -7,6 +7,7 @@
 	import seeds from '$lib/images/seeds.png';
 	import menu from '$lib/images/menu.png';
 	import sauce from '$lib/images/sauce.png';
+	import bag from '$lib/images/bags.webp';
 
 	
 	import {
@@ -42,6 +43,12 @@
 		</a>
 	</div>
 
+	<div class="hotsauce">
+		<a href="./shoppingcart">
+			<img width=40px height=40px src={bag} alt="SvelteKit" />
+		</a>
+	</div>
+
 	<div class="corner">
 		<a href="/">
 			<img src={home} alt="SvelteKit" />
@@ -54,11 +61,6 @@
 		</a>
 	</div>
 
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
 
 		
 	<!-- Profile dropdown -->

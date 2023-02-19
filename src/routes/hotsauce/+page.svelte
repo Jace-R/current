@@ -45,6 +45,7 @@ import p1 from '$lib/images/peppers/1.jpg'
   import p43 from '$lib/images/peppers/43.jpg'
   import p44 from '$lib/images/peppers/44.jpg'
   import p45 from '$lib/images/peppers/45.jpg'
+  import p46 from '$lib/images/hots/11.jpg'
   import berries from '$lib/images/peppers/straw.jpg'
   import winter from '$lib/images/peppers/winter.jpg'
   import winterberry from '$lib/images/peppers/winter2.jpg'
@@ -236,7 +237,7 @@ import p1 from '$lib/images/peppers/1.jpg'
 
     <div class="group relative">
     <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-    <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+    <img src={p4} alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
     </div>
     <h3 class="mt-6 text-sm text-gray-500">
     <div>
@@ -267,23 +268,12 @@ import p1 from '$lib/images/peppers/1.jpg'
     <h3 class="mt-6 text-sm text-gray-500">    
     <div>
     <Button block color="secondary" >Bleeding Borg 9</Button>
-      <Modal isOpen={open} {toggle}>
-      <ModalHeader {toggle}>Modal title</ModalHeader>
-      <ModalBody>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </ModalBody>
-      <ModalFooter>
-        <Button color="primary" on:click={toggle}>Do Something</Button>
-        <Button color="secondary" on:click={toggle}>Cancel</Button>
-      </ModalFooter>
-      </Modal>
     </div>
     </div>
 
     <div class="group relative">
     <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-    <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+    <img src={p46} alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
     </div>
     <h3 class="mt-6 text-sm text-gray-500">
     <div>
@@ -333,6 +323,74 @@ import p1 from '$lib/images/peppers/1.jpg'
     <div>
     <Button block color="secondary" >Carolina Reaper</Button>
 
+    </div> 
+    </div>
+    </div>
+
+    <!--end of modal mode-->
+    <!--end of modal mode-->
+    <div class="mt-6 space-y-12 lg:grid lg:grid-cols-6 lg:gap-x-6 lg:space-y-0">
+    <div class="group relative">
+    <div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+    <img src={p22} alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+    </div>
+    <h3 class="mt-6 text-sm text-gray-500">    
+    <div>
+    <Button block color="secondary" >Lemonstarburst</Button>
+      
+    </div>
+    </div>
+
+    <div class="group relative">
+    <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+    <img src={p23} alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+    </div>
+    <h3 class="mt-6 text-sm text-gray-500">
+    <div>
+    <Button block color="secondary" >Chocolate Habanero</Button>
+
+    </div> 
+    </div>
+
+    <div class="group relative">
+    <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+    <img src={p16} alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
+    </div>
+    <h3 class="mt-6 text-sm text-gray-500">
+    <div>
+    <Button block color="secondary" >Scotch Bonnet</Button>
+    </div> 
+    </div>
+
+    <div class="group relative">
+    <div class="relative border border-block: solid;h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+    <img src={p21} alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+    </div>
+    <h3 class="mt-6 text-sm text-gray-500">    
+    <div>
+    <Button block color="secondary" >Trinidad Scorpion</Button>
+      
+    </div>
+    </div>
+
+    <div class="group relative">
+    <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+    <img src={p4} alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="h-full w-full object-cover object-center">
+    </div>
+    <h3 class="mt-6 text-sm text-gray-500">
+    <div>
+    <Button block color="secondary" >7 Pot Brains</Button>
+
+    </div> 
+    </div>
+
+    <div class="group relative">
+    <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+    <img src={p5} alt="Collection of four insulated travel bottles on wooden shelf." class="h-full w-full object-cover object-center">
+    </div>
+    <h3 class="mt-6 text-sm text-gray-500">
+    <div>
+    <Button block color="secondary" >Moruga Scorpion</Button>
     </div> 
     </div>
     </div>

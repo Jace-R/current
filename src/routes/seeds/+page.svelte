@@ -200,7 +200,7 @@ import p1 from '$lib/images/peppers/1.jpg'
 
 <!-- Packages for Hot Sauces-->
 
-<div class="bg-gray-100">
+<div class="bg-purple-100">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 	  <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-20">
 		<Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Selections</h1></Button>
@@ -365,7 +365,7 @@ import p1 from '$lib/images/peppers/1.jpg'
 		<p></p>
 	</div>
 
-  <div class="bg-gray-100 justify-center">
+  <div class="bg-purple-100 justify-center">
     <div class="mt-6 mb-6">
       <Container class="justify-center pt-2 pb-2">
 		<Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collectibles</h1></Button>
@@ -689,9 +689,9 @@ import p1 from '$lib/images/peppers/1.jpg'
 		
 	  </div>
 
-	  <div class="bg-gray-100" >
+	  <div class="bg-purple-100" >
 		<div class="container">
-			<div class="bg-gray-100">
+			<div class="bg-purple-100">
 				<div class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-400 lg:pt-6 lg:pb-16 lg:pr-8" >
 							
 					

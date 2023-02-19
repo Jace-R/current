@@ -11,7 +11,7 @@
 
 
 
-<div class="bg-gray-100 justify-center">
+<div class="bg-green-100 justify-center">
  <div class="mt-6 mb-6">
    <Container class="justify-center pt-2 pb-2">
  <Button block color="secondary" class="text-2xl font-bold text-gray-900"><h1 class="text-center">Collectibles</h1></Button>
